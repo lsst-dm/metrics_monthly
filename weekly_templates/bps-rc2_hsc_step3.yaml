@@ -1,0 +1,51 @@
+##############
+# BPS OPERATOR
+##############
+
+pipelineYaml: "$DRP_PIPE_DIR/pipelines/HSC/DRP-RC2.yaml#step3"
+
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_idf.yaml
+
+iddsServer: "https://aipanda015.cern.ch:443/idds"
+
+campaign: "G3WNUMBER"
+computeSite: SLAC
+computeCloud: US
+queue: "SLAC_TEST"
+requestMemory: 2048
+requestCpus: 1
+
+weekly: w_2022_30
+# without prmon(streaming logging)
+runnerCommand: 'unset PYTHONPATH; env; source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/{weekly}/loadLSS\
+T.bash;pwd;ls -al;setup lsst_distrib; python3 ${CTRL_BPS_PANDA_DIR}/python/lsst/ctrl/bps/panda/edgenode/cm\
+d_line_decoder.py _cmd_line_;retStat=$?; rm -fr EXEC_REPO-*; exit $retStat'
+
+wmsServiceClass: lsst.ctrl.bps.panda.panda_service.PanDAService
+
+payload:
+  payloadName: rc2
+  butlerConfig: /sdf/group/rubin/repo/main
+  inCollection: HSC/RC2/defaults
+  output: "HSC/runs/RC2/w_WEEKLY/DM-TICKETNUM"
+  dataQuery: "exposure = 34342"
+  fileDistributionEndPoint: "file:///sdf/group/rubin/sandbox/orion/panda_cache_box/payload/{uniqProcName}/\
+"
+  forcedPhotCoadd:
+     queue: "SLAC_TEST"
+
+executionButler:
+  requestMemory: 64000
+  queue: "SLAC_TEST"
+
+maxJobsPerTask: 30000
+
+extraRunQuantumOptions: --no-versions
+extraInitOptions: --no-versions
+
+pipetask:
+  skyCorr:
+    requestMemory: 11500
+  fgcmBuildStarsTable:
+    requestMemory: 8192
