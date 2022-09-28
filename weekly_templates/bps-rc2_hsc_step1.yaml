@@ -13,8 +13,8 @@ LSST_VERSION: w_WEEKLY
 payload:
   butlerConfig: /sdf/group/rubin/repo/main_20220411
   inCollection: HSC/RC2/defaults
-  output: "HSC/runs/RC2/w_WEEKLY/DM-TICKETNUM"
-  dataQuery: ""
+  output: "u/{operator}/HSC/runs/RC2/w_WEEKLY/PREOPS-TICKETNUM"
+  dataQuery: exposure = 34342 AND detector=10
 
 executionButler:
   requestMemory: 64000
