@@ -1,0 +1,27 @@
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
+- ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
+
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step7"
+
+LSST_VERSION: w_2022_40
+payload:
+  payloadName: "{LSST_VERSION}/DM-36356"
+  output: "HSC/runs/RC2/{payloadName}"
+  butlerConfig: /sdf/group/rubin/repo/main_20220411
+  inCollection: "HSC/RC2/defaults"
+
+  dataQuery: "instrument='HSC'"
+
+  # From DM-36141
+  payloadFolder: payload
+  fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
+
+executionButler:
+  requestMemory: 64000
+  queue: "SLAC_Rubin_Merge"
+
+numberOfRetries: 3
+
+# For rescue
+#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
