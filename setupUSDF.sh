@@ -1,6 +1,6 @@
 #!/bin/bash
 # setup Rubin env
-export weekly=w_2022_32
+export weekly=w_2022_36
 # source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/loadLSST.bash 
 # setup lsst_distrib
 
@@ -13,5 +13,8 @@ export PANDA_VERIFY_HOST=off
 export PANDA_AUTH_VO=Rubin
 
 # IDDS_CONFIG path depends on the weekly version 
-idds_cfg_template=/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/conda/envs/lsst-scipipe-*/etc/idds/idds.cfg.client.template
-export IDDS_CONFIG=`echo $idds_cfg_template |  cut -d ' ' -f1`
+export PANDA_SYS=$CONDA_PREFIX
+export IDDS_CONFIG=${PANDA_SYS}/etc/idds/idds.cfg.client.template
+ 
+# WMS plugin
+export BPS_WMS_SERVICE_CLASS=lsst.ctrl.bps.panda.PanDAService

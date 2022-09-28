@@ -1,0 +1,23 @@
+# An example bps submission yaml
+# Need to setup USDF before submitting the yaml
+# source setupUSDF.sh
+ 
+LSST_VERSION: w_2022_36
+ 
+queue: "SLAC_TEST"
+ 
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
+ 
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#isr"
+ 
+payload:
+  payloadName: testUSDF
+  inCollection: "HSC/RC2/defaults"
+  dataQuery: "exposure = 34342 AND detector = 10"
+ 
+  s3EndpointUrl: "https://storage.googleapis.com"
+  # butlerConfig: /sdf/group/rubin/repo/main
+  butlerConfig: /sdf/group/rubin/repo/main_20220411
+  payloadFolder: payload
+  fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
