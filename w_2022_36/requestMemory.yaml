@@ -15,8 +15,6 @@ pipetask:
     requestMemory: 16384
   matchCatalogsPatch:
     requestMemory: 4096
-  modelPhotRepGal4:
-    requestMemory: 4096
   imageDifference:
     requestMemory: 4096
   matchCatalogsPatchMultiBand:
@@ -48,17 +46,33 @@ pipetask:
   healSparsePropertyMaps:
     requestMemory: 30000
   consolidateObjectTable:
-    requestMemory: 30000
+    requestMemory: 35000
   getTemplate:
     requestMemory: 5000
   consolidateFullDiaObjectTable:
     requestMemory: 10000
   consolidateForcedSourceOnDiaObjectTable:
-    requestMemory: 350000
+    requestMemory: 490000
     queue: "SLAC_Rubin_Merge"
+    #requestMemory: 220000
   transformForcedSourceOnDiaObjectTable:
     requestMemory: 10000
   consolidateAssocDiaSourceTable:
     requestMemory: 5000
   consolidateForcedSourceTable:
     requestMemory: 200000
+
+  matchCatalogsTractMag17to21p5:
+    requestMemory: 200000
+  matchCatalogsTractGxsSNR5to80:
+    requestMemory: 200000
+  matchCatalogsTractStarsSNR5to80:
+    requestMemory: 200000
+  modelPhotRepGal4:
+    requestMemory: 5000
+  modelPhotRepGal3:
+    requestMemory: 5000
+  modelPhotRepGal2:
+    requestMemory: 5000
+  modelPhotRepGal1:
+    requestMemory: 5000
