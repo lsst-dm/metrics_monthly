@@ -1,11 +1,11 @@
 # change these numbers every run
 export NUMBER='32'
 export WEEKLY='2022_32'
-export TICKETNUM='STEP1-TEST'
-export DATETAG='2022-08-23T03:25'
+export TICKETNUM='STEP1-RUNTIME-TEST'
+export DATETAG='2022-08-25T04:02'
 
 # setup directory for weekly run
-DIR=w_${WEEKLY}
+DIR=step1-runtime-test #w_${WEEKLY}
 echo Copying to $DIR
 mkdir -p $DIR
 cp  weekly_templates/* $DIR/
