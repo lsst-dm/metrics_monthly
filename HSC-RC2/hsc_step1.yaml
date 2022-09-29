@@ -17,9 +17,6 @@ payload:
   payloadFolder: payload
   fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
 
-executionButler:
-  requestMemory: 64000
-  queue: "SLAC_Rubin_Merge"
 
 numberOfRetries: 3
 
