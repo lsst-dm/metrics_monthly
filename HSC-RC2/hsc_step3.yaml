@@ -8,7 +8,7 @@ LSST_VERSION: w_2022_40
 payload:
   payloadName: "{LSST_VERSION}/DM-36356"
   output: "HSC/runs/RC2/{payloadName}"
-  butlerConfig: /sdf/group/rubin/repo/main_20220411
+  butlerConfig: /sdf/group/rubin/repo/main_20210215
   inCollection: "HSC/RC2/defaults"
 
   dataQuery: "skymap='hsc_rings_v1' AND tract IN (9615, 9697, 9813)"
@@ -16,10 +16,6 @@ payload:
   # From DM-36141
   payloadFolder: payload
   fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
-
-executionButler:
-  requestMemory: 64000
-  queue: "SLAC_Rubin_Merge"
 
 numberOfRetries: 3
 
