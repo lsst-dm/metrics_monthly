@@ -13,10 +13,6 @@ payload:
 
   dataQuery: ""
 
-  # From DM-36141
-  payloadFolder: payload
-  fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
-
 numberOfRetries: 3
 
 # For rescue
