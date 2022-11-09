@@ -13,10 +13,6 @@ payload:
 
   dataQuery: "instrument='HSC' AND skymap='hsc_rings_v1' AND tract IN (9615, 9697, 9813)"
 
-  # From DM-36141
-  payloadFolder: payload
-  fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
-
 piptask:
   consolidateForcedSourceOnDiaObjectTable:
     requestMemory: 490000
