@@ -5,9 +5,9 @@ includeConfigs:
 pipelineYaml: "${ANALYSIS_TOOLS_DIR}/pipelines/coaddQualityCore.yaml"
 
 
-LSST_VERSION: w_2022_40
+LSST_VERSION: w_2022_44
 payload:
-  payloadName: "{LSST_VERSION}/DM-36356"
+  payloadName: "{LSST_VERSION}/DM-36763"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main_20210215
   inCollection: "HSC/RC2/defaults"
