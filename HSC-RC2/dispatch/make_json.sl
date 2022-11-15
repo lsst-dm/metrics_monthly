@@ -6,9 +6,9 @@
 #SBATCH --mem=20G
 #SBATCH -t 24:00:00
 #SBATCH -J verify
-#SBATCH --output=/fs/ddn/sdf/group/rubin/sandbox/hchiang2/metrics_json/make_json_w40.%j.log
-#SBATCH --error=/fs/ddn/sdf/group/rubin/sandbox/hchiang2/metrics_json/make_json_w40.%j.log
-#SBATCH --chdir /fs/ddn/sdf/group/rubin/sandbox/hchiang2/metrics_json/w_2022_40
+#SBATCH --output=/fs/ddn/sdf/group/rubin/sandbox/hchiang2/metrics_json/make_json_w_2022_44.%j.log
+#SBATCH --error=/fs/ddn/sdf/group/rubin/sandbox/hchiang2/metrics_json/make_json_w_2022_44.%j.log
+#SBATCH --chdir /fs/ddn/sdf/group/rubin/sandbox/hchiang2/metrics_json/w_2022_44
 
-srun gen3_to_job.py /sdf/group/rubin/repo/main_20210215/  "HSC/runs/RC2/w_2022_40/DM-36356" --dataset_name 'HSC_RC2'
+srun gen3_to_job.py /sdf/group/rubin/repo/main_20210215/  "HSC/runs/RC2/w_2022_44/DM-36763" --dataset_name 'HSC_RC2'
 
