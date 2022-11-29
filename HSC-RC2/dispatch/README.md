@@ -1,6 +1,8 @@
 # Metrics dispatch
 * Obtain SQUASH user and password from the SQUASH admin.
 * Create the directory where the json files will be stored. Update the scripts for the directory.
+* Look up the date tag on [https://eups.lsst.codes/stack/src/tags/](https://eups.lsst.codes/stack/src/tags/) and update `dispatch.sh`.
+* Update scripts as needed.
 * Set up the `lsst_distrib` stack
 * `sbatch make_json.sl`
 * `sbatch dispatch.sl`
