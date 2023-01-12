@@ -5,11 +5,11 @@ includeConfigs:
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#analysis_coadd_plots"
 
 
-LSST_VERSION: w_2022_48
+LSST_VERSION: w_2023_01
 payload:
-  payloadName: "{LSST_VERSION}/DM-37089"
+  payloadName: "{LSST_VERSION}/DM-37483"
   output: "HSC/runs/RC2/{payloadName}"
-  butlerConfig: /sdf/group/rubin/repo/main_20210215
+  butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
 
   dataQuery: ""
