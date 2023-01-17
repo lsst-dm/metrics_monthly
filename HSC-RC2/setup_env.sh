@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-weekly=w_2023_01
+weekly=w_2023_02
 source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/loadLSST.bash
 setup lsst_distrib -t ${weekly}
 eups list lsst_distrib -s
 
 # Same as in ctrl_bps_panda/python/lsst/ctrl/bps/panda/conf_example/setupUSDF.sh
-export PANDA_CONFIG_ROOT=$HOME
+export PANDA_CONFIG_ROOT=$HOME/.panda
 export PANDA_URL_SSL=https://pandaserver-doma.cern.ch:25443/server/panda
 export PANDA_URL=http://pandaserver-doma.cern.ch:25080/server/panda
 export PANDAMON_URL=https://panda-doma.cern.ch

@@ -2,7 +2,7 @@ includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
 - ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
 
-pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step1"
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step2a"
 
 LSST_VERSION: w_2023_02
 payload:
