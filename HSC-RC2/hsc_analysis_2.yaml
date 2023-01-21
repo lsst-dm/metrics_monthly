@@ -16,5 +16,10 @@ payload:
 
 numberOfRetries: 3
 
+extraInitOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
+extraQgraphOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
+extraRunQuantumOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
+
+
 # For rescue
-extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
