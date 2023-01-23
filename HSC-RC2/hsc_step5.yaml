@@ -4,7 +4,7 @@ includeConfigs:
 
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step5"
 
-LSST_VERSION: w_2023_02
+LSST_VERSION: w_2023_03
 payload:
   payloadName: "{LSST_VERSION}/DM-37570"
   output: "HSC/runs/RC2/{payloadName}"
@@ -21,4 +21,4 @@ piptask:
 numberOfRetries: 3
 
 # For rescue
-extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
