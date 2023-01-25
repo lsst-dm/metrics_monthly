@@ -11,7 +11,7 @@ payload:
   butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
 
-  dataQuery: ""
+  dataQuery: "skymap='hsc_rings_v1' AND tract IN (9615, 9697, 9813)"
 
 numberOfRetries: 3
 
