@@ -5,16 +5,21 @@ includeConfigs:
 pipelineYaml: "${ANALYSIS_TOOLS_DIR}/pipelines/coaddQualityCore.yaml"
 
 
-LSST_VERSION: w_2022_48
+LSST_VERSION: w_2023_01
 payload:
-  payloadName: "{LSST_VERSION}/DM-37089"
+  payloadName: "{LSST_VERSION}/DM-37483"
   output: "HSC/runs/RC2/{payloadName}"
-  butlerConfig: /sdf/group/rubin/repo/main_20210215
+  butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
 
   dataQuery: ""
 
 numberOfRetries: 3
+
+extraInitOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
+extraQgraphOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
+extraRunQuantumOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
+
 
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
