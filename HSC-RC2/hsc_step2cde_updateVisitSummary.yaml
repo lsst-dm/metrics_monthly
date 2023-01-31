@@ -1,0 +1,22 @@
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
+- ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
+
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#updateVisitSummary"
+
+LSST_VERSION: w_2023_03
+payload:
+  payloadName: "{LSST_VERSION}/DM-37570"
+  output: "HSC/runs/RC2/{payloadName}"
+  butlerConfig: /sdf/group/rubin/repo/main
+  inCollection: "HSC/RC2/defaults"
+
+  dataQuery: "skymap='hsc_rings_v1'"
+
+numberOfRetries: 3
+
+
+EXTRA: " --dataset-query-constraint visitSummary"
+extraInitOptions: "{EXTRA}"
+extraQgraphOptions: "{EXTRA}"
+extraRunQuantumOptions: "{EXTRA}"
