@@ -1,0 +1,47 @@
+pipetask:
+  makeWarp:
+    requestMemory: 8192
+  assembleCoadd:
+    requestMemory: 24576
+  templateGeneration:
+    requestMemory: 16384
+  detection:
+    requestMemory: 16384
+  deblend:
+    requestMemory: 24576
+  measure:
+    requestMemory: 24576
+  mergeMeasurements:
+    requestMemory: 16384
+  forcedPhotCoadd: 
+    requestMemory: 4096
+  writeObjectTable:
+    requestMemory: 16384
+  matchCatalogsPatch:
+    requestMemory: 4096
+  modelPhotRepGal4:
+    requestMemory: 4096
+  imageDifference:
+    requestMemory: 4096
+  healSparsePropertyMaps:
+    requestMemory: 36000
+  matchCatalogsPatchMultiBand:
+    requestMemory: 120000
+  matchCatalogsTract:
+    requestMemory: 120000
+  matchCatalogsTractMag17to21p5:
+    requestMemory: 16384
+  matchCatalogsTractGxsSNR5to80:
+    requestMemory: 16384
+  matchCatalogsTractStarsSNR5to80:
+    requestMemory: 16384
+  wPerp:
+    requestMemory: 120000
+  TE1:
+    requestMemory: 46000
+  TE2:
+    requestMemory: 46000
+  consolidateObjectTable:
+    requestMemory: 8192
+  consolidateForcedSourceTable:
+    requestMemory: 120000
