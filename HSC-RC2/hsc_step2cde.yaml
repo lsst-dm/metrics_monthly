@@ -17,3 +17,9 @@ numberOfRetries: 3
 
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+
+pipetask:
+  makeCcdVisitTable:
+    requestMemory: 10000
+  makeVisitTable:
+    requestMemory: 10000
