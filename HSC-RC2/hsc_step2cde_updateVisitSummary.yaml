@@ -2,7 +2,7 @@ includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
 - ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
 
-pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step1"
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#updateVisitSummary"
 
 LSST_VERSION: w_2023_03
 payload:
@@ -11,7 +11,10 @@ payload:
   butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
 
-  dataQuery: ""
+  dataQuery: "skymap='hsc_rings_v1'"
 
-# For rescue
-#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+
+EXTRA: " --dataset-query-constraint visitSummary"
+extraInitOptions: "{EXTRA}"
+extraQgraphOptions: "{EXTRA}"
+extraRunQuantumOptions: "{EXTRA}"

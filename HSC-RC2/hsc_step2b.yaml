@@ -2,8 +2,7 @@ includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
 - ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
 
-pipelineYaml: "${ANALYSIS_TOOLS_DIR}/pipelines/coaddQualityCore.yaml"
-
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step2b"
 
 LSST_VERSION: w_2023_03
 payload:
@@ -12,12 +11,7 @@ payload:
   butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
 
-  dataQuery: ""
-
-extraInitOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
-extraQgraphOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
-extraRunQuantumOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
-
+  dataQuery: "skymap='hsc_rings_v1' AND tract IN (9615, 9697, 9813)"
 
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
