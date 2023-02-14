@@ -13,7 +13,5 @@ payload:
 
   dataQuery: "skymap='hsc_rings_v1' AND tract IN (9615, 9697, 9813)"
 
-numberOfRetries: 3
-
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"

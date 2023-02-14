@@ -13,8 +13,6 @@ payload:
 
   dataQuery: ""
 
-numberOfRetries: 3
-
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
 

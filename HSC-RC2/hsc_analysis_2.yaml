@@ -14,8 +14,6 @@ payload:
 
   dataQuery: ""
 
-numberOfRetries: 3
-
 extraInitOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
 extraQgraphOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"
 extraRunQuantumOptions: "--instrument lsst.obs.subaru.HyperSuprimeCam"

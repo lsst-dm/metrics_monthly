@@ -13,8 +13,6 @@ payload:
 
   dataQuery: "skymap='hsc_rings_v1'"
 
-numberOfRetries: 3
-
 
 EXTRA: " --dataset-query-constraint visitSummary"
 extraInitOptions: "{EXTRA}"

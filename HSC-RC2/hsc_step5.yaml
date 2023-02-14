@@ -18,7 +18,5 @@ piptask:
     requestMemory: 490000
     queue: "SLAC_Rubin_Merge"
 
-numberOfRetries: 3
-
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
