@@ -1,0 +1,44 @@
+pipetask:
+  makeWarp:
+    requestMemory: 8192
+  assembleCoadd:
+    requestMemory: 16384
+  deblend:
+    requestMemory: 16384
+  measure:
+    requestMemory: 16384
+  mergeMeasurements:
+    requestMemory: 16384
+  forcedPhotCoadd: 
+    requestMemory: 8192
+  getTemplate:
+    requestMemory: 8192
+  writeForcedSourceTable:
+    requestMemory: 8192
+  detectAndMeasureDiaSources:
+    requestMemory: 8192
+  writeObjectTable:
+    requestMemory: 16384
+  matchCatalogsPatch:
+    requestMemory: 8192
+  modelPhotRepGal4:
+    requestMemory: 8192
+  imageDifference:
+    requestMemory: 8192
+  matchCatalogsPatchMultiBand:
+    requestMemory: 120000
+  matchCatalogsTract:
+    requestMemory: 120000
+  wPerp:
+    requestMemory: 120000
+  TE1:
+    requestMemory: 46000
+  TE2:
+    requestMemory: 46000
+  consolidateObjectTable:
+    requestMemory: 4096
+  consolidateForcedSourceTable:
+    requestMemory: 120000
+  consolidateForcedSourceOnDiaObjectTable:
+    requestMemory: 18000
+    queue: SLAC_RUBIN_EXTRA_HIMEM
