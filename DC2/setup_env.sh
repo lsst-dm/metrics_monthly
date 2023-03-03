@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-weekly=w_2023_06
+weekly=w_2023_09
 source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/loadLSST.bash
 setup lsst_distrib -t ${weekly}
 eups list lsst_distrib -s
@@ -26,3 +26,6 @@ export https_proxy=http://atlsquid.slac.stanford.edu:3128
 export http_proxy=http://atlsquid.slac.stanford.edu:3128
 export HTTPS_PROXY=http://atlsquid.slac.stanford.edu:3128
 export SQUID_PROXY=http://atlsquid.slac.stanford.edu:3128
+
+# Check panda auth status
+panda_auth status
