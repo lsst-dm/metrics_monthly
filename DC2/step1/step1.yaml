@@ -23,3 +23,6 @@ payload:
   payloadFolder: payload
 
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_09"
+
+# For rescue
+extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
