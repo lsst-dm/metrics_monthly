@@ -3,10 +3,11 @@ includeConfigs:
 - ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
 
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step1"
+custom_lsst_setup: "setup -j -r /sdf/home/e/eiger/u/ctrl_bps; setup -j -r /sdf/home/e/eiger/u/ctrl_bps_panda; setup -j -r /sdf/home/e/eiger/u/ip_diffim"
 
-LSST_VERSION: w_2023_03
+LSST_VERSION: w_2023_11
 payload:
-  payloadName: "{LSST_VERSION}/DM-37570"
+  payloadName: "{LSST_VERSION}/DM-38360"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
@@ -14,4 +15,4 @@ payload:
   dataQuery: ""
 
 # For rescue
-#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
