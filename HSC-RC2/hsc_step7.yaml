@@ -4,9 +4,9 @@ includeConfigs:
 
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step7"
 
-LSST_VERSION: w_2023_03
+LSST_VERSION: w_2023_07
 payload:
-  payloadName: "{LSST_VERSION}/DM-37570"
+  payloadName: "{LSST_VERSION}/DM-38042"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"

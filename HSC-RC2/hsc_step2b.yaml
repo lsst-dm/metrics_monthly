@@ -4,12 +4,12 @@ includeConfigs:
 
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step2b"
 
-LSST_VERSION: w_2023_03
+LSST_VERSION: w_2023_07
 payload:
-  payloadName: "{LSST_VERSION}/DM-37570"
+  payloadName: "{LSST_VERSION}/DM-38042"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main
-  inCollection: "HSC/RC2/defaults"
+  inCollection: "HSC/RC2/defaults,u/zhaoyu/test_RC2_step1_w_2023_07/20230221T191649Z"
 
   dataQuery: "skymap='hsc_rings_v1' AND tract IN (9615, 9697, 9813)"
 
