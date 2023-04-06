@@ -1,0 +1,20 @@
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
+- ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
+
+custom_lsst_setup: 'setup -j -r /sdf/home/e/eiger/u/ctrl_bps; setup -j -r /sdf/home/e/eiger/u/ctrl_bps_panda; setup -j -r /sdf/home/e/eiger/u/ip_diffim;'
+
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#isr"
+
+LSST_VERSION: w_2023_11
+payload:
+  payloadName: testUSDF
+  butlerConfig: /sdf/group/rubin/repo/main
+  inCollection: "HSC/RC2/defaults"
+
+  dataQuery: "exposure = 34342 AND detector = 10"
+
+numberOfRetries: 3
+
+# For rescue
+#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
