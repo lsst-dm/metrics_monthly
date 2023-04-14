@@ -14,4 +14,4 @@ payload:
   dataQuery: "band != 'N921'"
 
 # For rescue
-#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
