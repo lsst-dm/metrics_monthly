@@ -7,10 +7,10 @@ includeConfigs:
 - requestMemory_step3.yaml
 #- clustering_step3.yaml
 
-LSST_VERSION: w_2023_09
+LSST_VERSION: w_2023_13
 
 project: dp02
-campaign: w_2023_09/DM-38212
+campaign: w_2023_13/DM-38781
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step3"
 
 payload:
@@ -24,5 +24,5 @@ payload:
   payloadFolder: payload
   fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
 
-  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_09"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_13"
 
