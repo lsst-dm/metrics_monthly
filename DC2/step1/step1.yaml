@@ -5,7 +5,7 @@ imports:
 includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
 - requestMemory_step1.yaml
-- clustering_step1.yaml
+# - clustering_step1.yaml
 
 LSST_VERSION: w_2023_09
 
