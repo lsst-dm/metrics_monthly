@@ -1,13 +1,12 @@
 #!/usr/bin/env sh
 
-weekly=w_2023_11
+weekly=w_2023_15
 source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/loadLSST.bash
 setup lsst_distrib -t ${weekly}
 
-# custom lsst setup for weekly 11: ctrl_bps, ctrl_bps_panda, ip_diffim
-setup -j -r /sdf/home/e/eiger/u/ctrl_bps
-setup -j -r /sdf/home/e/eiger/u/ctrl_bps_panda
-setup -j -r /sdf/home/e/eiger/u/ip_diffim
+#custom setups for w_15
+setup -j -r /sdf/home/e/eiger/u/fgcmcal
+setup -j -r /sdf/home/e/eiger/u/pipe_base
 eups list -s | grep LOCAL
 
 # Same as in ctrl_bps_panda/python/lsst/ctrl/bps/panda/conf_example/setupUSDF.sh

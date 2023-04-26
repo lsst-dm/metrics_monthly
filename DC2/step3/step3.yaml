@@ -25,4 +25,6 @@ payload:
   fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
 
   sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_13"
+# For rescue
+extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
 
