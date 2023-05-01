@@ -1,0 +1,102 @@
+lsst.ctrl.bps.drivers INFO: DISCLAIMER: All values regarding memory consumption reported below are approximate and may not accurately reflect actual memory usage by the bps process.
+lsst.ctrl.bps.drivers INFO: Starting submission process
+lsst.ctrl.bps.drivers INFO: Initializing execution environment
+lsst.ctrl.bps.drivers INFO: Initializing execution environment completed: Took 7.0295 seconds; current memory usage: 0.201 Gibyte, delta: 0.093 Gibyte, peak delta: 0.093 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.201 Gibyte (main), 0.112 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: Starting acquire stage (generating and/or reading quantum graph)
+lsst.ctrl.bps.pre_transform INFO: Creating quantum graph
+lsst.ctrl.bps.pre_transform INFO: /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_mpexec/g7fb7fc81a5+b9f3ea4278/bin/pipetask --long-log --log-level=VERBOSE --log-file payload-log.json qgraph -b /sdf/group/rubin/repo/dc2/butler.yaml -i 2.2i/defaults/test-med-1 -o 2.2i/runs/test-med-1/w_2023_06/DM-37822 --output-run 2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T014941Z -p /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/drp_pipe/g3d603a7782+d02fdb6197/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#faro_all -q /sdf/home/e/eiger/u/weekly_pipelines/DC2/step8/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T014941Z/2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T014941Z.qgraph -d "instrument='LSSTCam-imSim' and skymap='DC2' " 
+lsst.ctrl.bps.pre_transform INFO: INFO 2023-02-21T17:55:49.254-08:00 lsst.ctrl.mpexec.cmdLineFwk ()(cmdLineFwk.py:605) - QuantumGraph contains 2683 quanta for 38 tasks, graph ID: '1677030930.826439-3981812'
+Quanta              Tasks             
+------ -------------------------------
+   345                             TE4
+    12                    skyObjectStd
+    12                   skyObjectMean
+     2                           wPerp
+    12   matchCatalogsTractMag17to21p5
+    98     matchCatalogsPatchMultiBand
+    12                             TE2
+    12                             TE1
+    12 matchCatalogsTractStarsSNR5to80
+   345                   nsrcMeasVisit
+   588              matchCatalogsPatch
+    12   matchCatalogsTractGxsSNR5to80
+    12              matchCatalogsTract
+   345                             TE3
+    12                             AM3
+    12                      AF2_design
+    12                             AM2
+    12                      AD2_design
+    12                      AD3_design
+    12                             AM1
+    12                      AD1_design
+    12                      AF1_design
+    12                      AF3_design
+   588                             AB1
+    12               modelPhotRepStar2
+    12                 psfPhotRepStar3
+    12               modelPhotRepStar1
+    12                 psfPhotRepStar2
+    12               modelPhotRepStar3
+    12                 psfPhotRepStar4
+    12                 psfPhotRepStar1
+    12               modelPhotRepStar4
+    12                modelPhotRepGal1
+    12                modelPhotRepGal3
+    12                modelPhotRepGal2
+    12                modelPhotRepGal4
+    12                      PF1_design
+    12                             PA1
+
+lsst.ctrl.bps.pre_transform INFO: Overriding default configuration file with /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/dustmaps_cachedata/g41a3ec361e+62d12e78cb/config/.dustmapsrc
+
+lsst.ctrl.bps.pre_transform INFO: Completed creating quantum graph: Took 674.5803 seconds
+lsst.ctrl.bps.pre_transform INFO: Reading quantum graph from '/sdf/home/e/eiger/u/weekly_pipelines/DC2/step8/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T014941Z/2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T014941Z.qgraph'
+lsst.ctrl.bps.pre_transform INFO: Completed reading quantum graph: Took 52.9235 seconds
+lsst.ctrl.bps.drivers INFO: Acquire stage completed: Took 727.5489 seconds; current memory usage: 0.979 Gibyte, delta: 0.777 Gibyte, peak delta: 0.782 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.984 Gibyte (main), 1.167 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: Starting cluster stage (grouping quanta into jobs)
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task skyObjectStd
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task TE1
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task skyObjectMean
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task matchCatalogsTractGxsSNR5to80
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task matchCatalogsPatchMultiBand
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task matchCatalogsTract
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task matchCatalogsPatch
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task matchCatalogsTractMag17to21p5
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task matchCatalogsTractStarsSNR5to80
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task TE2
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task wPerp
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task AB1
+lsst.ctrl.bps.drivers INFO: Cluster stage completed: Took 0.1089 seconds; current memory usage: 0.979 Gibyte, delta: 0.000 Gibyte, peak delta: 0.000 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.984 Gibyte (main), 1.167 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: ClusteredQuantumGraph contains 1729 cluster(s)
+lsst.ctrl.bps.drivers INFO: Starting transform stage (creating generic workflow)
+lsst.ctrl.bps.drivers INFO: Generic workflow name '2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T014941Z'
+lsst.ctrl.bps.drivers INFO: Transform stage completed: Took 0.7172 seconds; current memory usage: 0.979 Gibyte, delta: 0.000 Gibyte, peak delta: 0.000 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.984 Gibyte (main), 1.167 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: GenericWorkflow contains 1731 job(s) (including final)
+lsst.ctrl.bps.drivers INFO: Starting prepare stage (creating specific implementation of workflow)
+lsst.ctrl.bps.drivers ERROR: Prepare stage completed: Took 0.1214 seconds; current memory usage: 0.979 Gibyte, delta: 0.000 Gibyte, peak delta: 0.000 Gibyte
+lsst.ctrl.bps.drivers ERROR: Completed entire submission process: Took 735.8127 seconds; current memory usage: 0.979 Gibyte, delta: 0.870 Gibyte, peak delta: 0.875 Gibyte
+lsst.daf.butler.cli.utils ERROR: Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps/g8b43151ba3+e881a08188/python/lsst/ctrl/bps/cli/cmd/commands.py", line 86, in submit
+    submit_driver(*args, **kwargs)
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps/g8b43151ba3+e881a08188/python/lsst/ctrl/bps/drivers.py", line 393, in submit_driver
+    wms_workflow_config, wms_workflow = prepare_driver(config_file, **kwargs)
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps/g8b43151ba3+e881a08188/python/lsst/ctrl/bps/drivers.py", line 357, in prepare_driver
+    wms_workflow = prepare(generic_workflow_config, generic_workflow, submit_path)
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/utils/g07908579e6+12ea8df0d8/python/lsst/utils/timer.py", line 347, in timeMethod_wrapper
+    res = func(self, *args, **keyArgs)
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps/g8b43151ba3+e881a08188/python/lsst/ctrl/bps/prepare.py", line 73, in prepare
+    wms_workflow = wms_service.prepare(config, generic_workflow, out_prefix)
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps_panda/g45a2f5dbb2+e72ed17fbd/python/lsst/ctrl/bps/panda/panda_service.py", line 54, in prepare
+    workflow = PandaBpsWmsWorkflow.from_generic_workflow(
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps_panda/g45a2f5dbb2+e72ed17fbd/python/lsst/ctrl/bps/panda/panda_service.py", line 290, in from_generic_workflow
+    files, dag_sink_work, task_count = add_idds_work(
+  File "/cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_bps_panda/g45a2f5dbb2+e72ed17fbd/python/lsst/ctrl/bps/panda/utils.py", line 509, in add_idds_work
+    "task": job_to_task[parent_job_name],
+KeyError: '4ee65c4a-bfcd-477b-b6d1-c9475012ed0c_matchCatalogsTractGxsSNR5to80_3829_g_'
+Submit dir: /sdf/home/e/eiger/u/weekly_pipelines/DC2/step8/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T014941Z
+Overriding default configuration file with /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/dustmaps_cachedata/g41a3ec361e+62d12e78cb/config/.dustmapsrc

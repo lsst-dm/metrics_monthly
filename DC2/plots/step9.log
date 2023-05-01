@@ -1,0 +1,110 @@
+lsst.ctrl.bps.drivers INFO: DISCLAIMER: All values regarding memory consumption reported below are approximate and may not accurately reflect actual memory usage by the bps process.
+lsst.ctrl.bps.drivers INFO: Starting submission process
+lsst.ctrl.bps.drivers INFO: Initializing execution environment
+lsst.ctrl.bps.drivers INFO: Initializing execution environment completed: Took 7.0717 seconds; current memory usage: 0.201 Gibyte, delta: 0.093 Gibyte, peak delta: 0.093 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.201 Gibyte (main), 0.112 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: Starting acquire stage (generating and/or reading quantum graph)
+lsst.ctrl.bps.pre_transform INFO: Creating quantum graph
+lsst.ctrl.bps.pre_transform INFO: /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/ctrl_mpexec/g7fb7fc81a5+b9f3ea4278/bin/pipetask --long-log --log-level=VERBOSE --log-file payload-log.json qgraph -b /sdf/group/rubin/repo/dc2/butler.yaml -i 2.2i/defaults/test-med-1 -o 2.2i/runs/test-med-1/w_2023_06/DM-37822 --output-run 2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T015012Z -p /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2023_06/conda/envs/lsst-scipipe-5.1.0/share/eups/Linux64/drp_pipe/g3d603a7782+d02fdb6197/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#analysis_coadd_plots -q /sdf/home/e/eiger/u/weekly_pipelines/DC2/step9/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T015012Z/2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T015012Z.qgraph -d "instrument='LSSTCam-imSim'" 
+lsst.ctrl.bps.pre_transform INFO: INFO 2023-02-21T17:50:26.235-08:00 lsst.ctrl.mpexec.cmdLineFwk ()(cmdLineFwk.py:605) - QuantumGraph contains 68 quanta for 34 tasks, graph ID: '1677030626.2257214-3984858'
+Quanta                         Tasks                        
+------ -----------------------------------------------------
+     2                                    histPlot_skyObject
+     2     plot_CircAp12_sub_PSF_meas_calib_psf_used_sky_all
+     2                                      plot_xFit_CModel
+     2                                       plot_E2Diff_sky
+     2                                    plot_RhoStatistics
+     2                                         plot_wFit_PSF
+     2              plot_CModel_sub_PSFmag_meas_sky_galaxies
+     2                                   plot_E2Diff_scatter
+     2 plot_CircAp12_sub_PSF_meas_calib_psf_used_all_scatter
+     2                  plot_CircAp12_sub_PSF_meas_sky_stars
+     2                   plot_CircAp12_sub_PSF_meas_sky_gals
+     2                                       plot_E1Diff_sky
+     2                                   plot_E1Diff_scatter
+     2                                     plot_ri_gr_cmodel
+     2                  plot_shapeSizeFractionalDiff_scatter
+     2                           plot_PSFFluxSN_meas_sky_all
+     2                        match_astromRefCat_objectTable
+     2                           plot_E1Diff_magDiff_scatter
+     2                      plot_shapeSizeFractionalDiff_sky
+     2          plot_shapeSizeFractionalDiff_magDiff_scatter
+     2                                      plot_yFit_CModel
+     2                                     skyPlot_skyObject
+     2                                      plot_wFit_CModel
+     2                           plot_E2Diff_magDiff_scatter
+     2                 plot_CModel_sub_PSFmag_meas_sky_stars
+     2                                         plot_yFit_PSF
+     2                                        plot_ri_gr_psf
+     2               plot_CircAp12_sub_PSF_meas_gals_scatter
+     2              plot_CircAp12_sub_PSF_meas_stars_scatter
+     2                                         plot_xFit_PSF
+     2                      plot_astromRefCat_sky_tract_dDec
+     2                   plot_astromRefCat_scatter_tract_dRA
+     2                       plot_astromRefCat_sky_tract_dRA
+     2                  plot_astromRefCat_scatter_tract_dDec
+
+lsst.ctrl.bps.pre_transform INFO: Completed creating quantum graph: Took 7.3322 seconds
+lsst.ctrl.bps.pre_transform INFO: Reading quantum graph from '/sdf/home/e/eiger/u/weekly_pipelines/DC2/step9/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T015012Z/2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T015012Z.qgraph'
+lsst.ctrl.bps.pre_transform INFO: Completed reading quantum graph: Took 3.9111 seconds
+lsst.ctrl.bps.drivers INFO: Acquire stage completed: Took 11.2886 seconds; current memory usage: 0.418 Gibyte, delta: 0.216 Gibyte, peak delta: 0.216 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.418 Gibyte (main), 0.370 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: Starting cluster stage (grouping quanta into jobs)
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CModel_sub_PSFmag_meas_sky_stars
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task histPlot_skyObject
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_RhoStatistics
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CircAp12_sub_PSF_meas_sky_gals
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_ri_gr_cmodel
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_xFit_CModel
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_wFit_CModel
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_E1Diff_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CircAp12_sub_PSF_meas_stars_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_wFit_PSF
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_E2Diff_magDiff_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CircAp12_sub_PSF_meas_gals_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_ri_gr_psf
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task skyPlot_skyObject
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_xFit_PSF
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_E2Diff_sky
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_shapeSizeFractionalDiff_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CModel_sub_PSFmag_meas_sky_galaxies
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CircAp12_sub_PSF_meas_sky_stars
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task match_astromRefCat_objectTable
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_shapeSizeFractionalDiff_sky
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_E1Diff_sky
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CircAp12_sub_PSF_meas_calib_psf_used_all_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_E1Diff_magDiff_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_yFit_PSF
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_yFit_CModel
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_CircAp12_sub_PSF_meas_calib_psf_used_sky_all
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_PSFFluxSN_meas_sky_all
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_shapeSizeFractionalDiff_magDiff_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_E2Diff_scatter
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_astromRefCat_scatter_tract_dDec
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_astromRefCat_sky_tract_dRA
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_astromRefCat_scatter_tract_dRA
+lsst.ctrl.bps.quantum_clustering_funcs INFO: Creating 1-quantum clusters for task plot_astromRefCat_sky_tract_dDec
+lsst.ctrl.bps.drivers INFO: Cluster stage completed: Took 0.0561 seconds; current memory usage: 0.418 Gibyte, delta: 0.000 Gibyte, peak delta: 0.000 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.418 Gibyte (main), 0.370 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: ClusteredQuantumGraph contains 68 cluster(s)
+lsst.ctrl.bps.drivers INFO: Starting transform stage (creating generic workflow)
+lsst.ctrl.bps.drivers INFO: Generic workflow name '2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T015012Z'
+lsst.ctrl.bps.drivers INFO: Transform stage completed: Took 0.2602 seconds; current memory usage: 0.418 Gibyte, delta: 0.000 Gibyte, peak delta: 0.000 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.418 Gibyte (main), 0.370 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: GenericWorkflow contains 70 job(s) (including final)
+lsst.ctrl.bps.drivers INFO: Starting prepare stage (creating specific implementation of workflow)
+lsst.ctrl.bps.drivers INFO: Prepare stage completed: Took 0.1237 seconds; current memory usage: 0.418 Gibyte, delta: 0.000 Gibyte, peak delta: 0.000 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.418 Gibyte (main), 0.370 Gibyte (largest child process)
+lsst.ctrl.bps.drivers INFO: Starting submit stage
+lsst.ctrl.bps.submit INFO: Creating execution butler in '/sdf/home/e/eiger/u/weekly_pipelines/DC2/step9/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T015012Z/EXEC_REPO-2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T015012Z'
+lsst.ctrl.bps.submit INFO: Completed creating execution butler: Took 11.7185 seconds
+lsst.ctrl.bps.submit INFO: Submitting run to a workflow management system for execution
+lsst.ctrl.bps.panda.panda_service INFO: Submitted into iDDs with request id=3416
+lsst.ctrl.bps.submit INFO: Completed submitting to a workflow management system: Took 2.8071 seconds
+lsst.ctrl.bps.drivers INFO: Run '2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T015012Z' submitted for execution with id '3416'
+lsst.ctrl.bps.drivers INFO: Completed submit stage: Took 14.5707 seconds; current memory usage: 0.418 Gibyte, delta: 0.000 Gibyte, peak delta: 0.002 Gibyte
+lsst.ctrl.bps.drivers INFO: Completed entire submission process: Took 33.7042 seconds; current memory usage: 0.418 Gibyte, delta: 0.309 Gibyte, peak delta: 0.311 Gibyte
+lsst.ctrl.bps.drivers INFO: Peak memory usage for bps process 0.420 Gibyte (main), 0.420 Gibyte (largest child process)
+Submit dir: /sdf/home/e/eiger/u/weekly_pipelines/DC2/step9/submit/2.2i/runs/test-med-1/w_2023_06/DM-37822/20230222T015012Z
+Run Id: 3416
+Run Name: 2.2i_runs_test-med-1_w_2023_06_DM-37822_20230222T015012Z
