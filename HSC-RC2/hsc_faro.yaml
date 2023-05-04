@@ -4,9 +4,9 @@ includeConfigs:
 
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#faro_all"
 
-LSST_VERSION: w_2023_07
+LSST_VERSION: w_2023_11
 payload:
-  payloadName: "{LSST_VERSION}/DM-38042"
+  payloadName: "{LSST_VERSION}/DM-38360"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main
   inCollection: "HSC/RC2/defaults"
@@ -14,4 +14,4 @@ payload:
   dataQuery: "band != 'N921'"
 
 # For rescue
-#extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
