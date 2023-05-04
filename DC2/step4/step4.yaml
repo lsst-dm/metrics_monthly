@@ -12,6 +12,7 @@ LSST_VERSION: w_2023_09
 project: dp02
 campaign: w_2023_09/DM-38212
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step4"
+custom_lsst_setup: "setup -j -r /sdf/home/m/mccarthy/prod/ip_diffim"
 
 payload:
   payloadName: 2.2i/runs/test-med-1
