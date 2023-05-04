@@ -10,7 +10,8 @@ payload:
   payloadName: "{LSST_VERSION}/DM-38360"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main
-  inCollection: "HSC/RC2/defaults"
+  inCollection: "HSC/RC2/defaults,u/zhaoyu/test_RC2_step1_w_2023_07/20230221T191649Z"
+
 
   dataQuery: ""
 

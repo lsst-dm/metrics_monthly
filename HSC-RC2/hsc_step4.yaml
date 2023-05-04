@@ -10,9 +10,12 @@ payload:
   payloadName: "{LSST_VERSION}/DM-38360"
   output: "HSC/runs/RC2/{payloadName}"
   butlerConfig: /sdf/group/rubin/repo/main
-  inCollection: "HSC/RC2/defaults"
+  inCollection: "HSC/runs/RC2/{payloadName}"
 
   dataQuery: ""
+
+executionButler:
+  command2: ""
 
 # For rescue
 #extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"

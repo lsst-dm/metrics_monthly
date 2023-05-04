@@ -5,6 +5,6 @@
 #SBATCH --mem=20G
 #SBATCH -t 54:00:00
 #SBATCH -J verify
-#SBATCH --output=dispatch_w_2023_06.%j.log
-#SBATCH --error=dispatch_w_2023_06.%j.log
+#SBATCH --output=dispatch_w_2023_09.%j.log
+#SBATCH --error=dispatch_w_2023_09.%j.log
 srun dispatch.sh

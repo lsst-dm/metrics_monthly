@@ -5,12 +5,12 @@ imports:
 includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
 - requestMemory_step1.yaml
-- clustering_step1.yaml
+# - clustering_step1.yaml
 
-LSST_VERSION: w_2023_06
+LSST_VERSION: w_2023_09
 
 project: dp02
-campaign: w_2023_06/DM-37822
+campaign: w_2023_09/DM-38212
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step1"
 
 payload:
@@ -22,4 +22,7 @@ payload:
   dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829)"
   payloadFolder: payload
 
-  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_06"
+  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_09"
+
+# For rescue
+extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
