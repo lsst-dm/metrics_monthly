@@ -42,6 +42,6 @@ pipetask:
   TE2:
     requestMemory: 46000
   consolidateObjectTable:
-    requestMemory: 8192
+    requestMemory: 12000
   consolidateForcedSourceTable:
     requestMemory: 120000

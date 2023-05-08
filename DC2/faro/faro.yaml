@@ -4,20 +4,21 @@ imports:
 
 includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
-#- requestMemory_step8.yaml
+- requestMemory_step8.yaml
 #- clustering_step8.yaml
 
 LSST_VERSION: w_2023_13
 
 project: dp02
 campaign: w_2023_13/DM-38781
-pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step8"
+pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#faro_all"
+
 payload:
   payloadName: 2.2i/runs/test-med-1
   output: "{payloadName}/{campaign}"
   butlerConfig: /sdf/group/rubin/repo/dc2/butler.yaml
   inCollection: "2.2i/defaults/test-med-1"
-  dataQuery: "instrument='LSSTCam-imSim'"# and skymap='DC2'"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' "
   s3EndpointUrl: "https://storage.googleapis.com"
   payloadFolder: payload
   fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"

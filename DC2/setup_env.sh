@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-weekly=w_2023_09
+weekly=w_2023_13
 source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/loadLSST.bash
 setup lsst_distrib -t ${weekly}
 eups list lsst_distrib -s
