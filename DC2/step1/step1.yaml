@@ -5,12 +5,12 @@ imports:
 includeConfigs:
 - ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
 - requestMemory_step1.yaml
-# - clustering_step1.yaml
+- clustering_step1.yaml
 
-LSST_VERSION: w_2023_13
+LSST_VERSION: w_2023_17
 
 project: dp02
-campaign: w_2023_13/DM-38781
+campaign: w_2023_17/DM-39092
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step1"
 
 payload:
@@ -20,6 +20,4 @@ payload:
   butlerConfig: /sdf/group/rubin/repo/dc2/butler.yaml
   inCollection: "2.2i/defaults/test-med-1"
   dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829)"
-  payloadFolder: payload
-
-  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_13"
+#  payloadFolder: payload

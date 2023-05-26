@@ -1,4 +1,3 @@
-
 imports:
   - $DRP_PIPE_DIR/ingredients/LSSTCam-imSim/DRP.yaml
   - $ANALYSIS_DRP_DIR/pipelines/LSSTCam-imSim/analysis_drp_plots.yaml
@@ -8,12 +7,11 @@ includeConfigs:
 - requestMemory_step5.yaml
 - clustering_step5.yaml
 
-LSST_VERSION: w_2023_13
+LSST_VERSION: w_2023_17
 
 project: dp02
-campaign: w_2023_13/DM-38781
+campaign: w_2023_17/DM-39092
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step5"
-custom_lsst_setup: "setup -j -r /sdf/home/m/mccarthy/prod/ip_diffim"
 
 payload:
   payloadName: 2.2i/runs/test-med-1
@@ -21,9 +19,4 @@ payload:
   butlerConfig: /sdf/group/rubin/repo/dc2/butler.yaml
   inCollection: "2.2i/defaults/test-med-1"
   dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829)"
-  s3EndpointUrl: "https://storage.googleapis.com"
-  payloadFolder: payload
-  fileDistributionEndPoint: "file:///sdf/group/rubin/panda_jobs/{operator}/panda_cache_box/{payloadFolder}/{uniqProcName}/"
 
-  sw_image: "lsstsqre/centos:7-stack-lsst_distrib-w_2023_13
-"
