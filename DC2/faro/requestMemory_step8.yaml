@@ -15,6 +15,8 @@ pipetask:
     requestMemory: 16384
   matchCatalogsPatch:
     requestMemory: 4096
+  machCatalogsPatchMultiBand:
+    requestMemory: 8192
   modelPhotRepGal4:
     requestMemory: 4096
   imageDifference:
