@@ -12,7 +12,7 @@ pipetask:
   forcedPhotCoadd: 
     requestMemory: 8192
   getTemplate:
-    requestMemory: 8192
+    requestMemory: 16384
   writeForcedSourceTable:
     requestMemory: 8192
   detectAndMeasureDiaSources:
