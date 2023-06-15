@@ -7,10 +7,9 @@ includeConfigs:
 #- requestMemory_step8.yaml
 #- clustering_step8.yaml
 
-LSST_VERSION: w_2023_17
+LSST_VERSION: w_2023_21
 
-project: dp02
-campaign: w_2023_17/DM-39092
+campaign: w_2023_21/DM-39419
 pipelineYaml: "${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step8"
 payload:
   payloadName: 2.2i/runs/test-med-1
@@ -20,5 +19,5 @@ payload:
   dataQuery: "instrument='LSSTCam-imSim'"# and skymap='DC2'"
 
 #For sasquatch
-#extraRunQuantumOptions: -c parameters:sasquatch_dataset_identifier=DC2/TestMed1 -c parameters:sasquatch_timestamp_version=reference_package_timestamp
+extraRunQuantumOptions: -c parameters:sasquatch_dataset_identifier=DC2/TestMed1 -c parameters:sasquatch_timestamp_version=reference_package_timestamp
 
