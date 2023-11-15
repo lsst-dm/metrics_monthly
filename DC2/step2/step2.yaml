@@ -18,6 +18,6 @@ payload:
 #  output: u/{operator}/{campaign}
   butlerConfig: /sdf/group/rubin/repo/dc2/butler.yaml
   inCollection: "2.2i/defaults/test-med-1"
-  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829)"
+  dataQuery: "instrument='LSSTCam-imSim' and skymap='DC2'"
 
 
