@@ -1,0 +1,16 @@
+LSST_VERSION: w_2023_41
+custom_lsst_setup: ''
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
+- ${DRP_PIPE_DIR}/bps/resources/LSSTCam-imSim/DRP-test-med-1.yaml
+numberOfRetries: 3
+payload:
+  butlerConfig: /repo/dc2
+  dataQuery: instrument = 'LSSTCam-imSim' and skymap = 'DC2' and tract in (3828,3829)
+  inCollection: 2.2i/defaults/test-med-1
+  payloadName: "w_2023_41/DM-41286"
+  output: "2.2i/runs/test-med-1/{payloadName}"
+pipelineYaml: ${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step6
+priority: 1000
+# For rescue
+# extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"

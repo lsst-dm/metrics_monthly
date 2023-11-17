@@ -1,9 +1,11 @@
 #!/usr/bin/env sh
 
-weekly=w_2023_21
+weekly=w_2023_41
 source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/${weekly}/loadLSST.bash
 setup lsst_distrib -t ${weekly}
-eups list lsst_distrib -s
+
+#custom setups?
+eups list -s | grep LOCAL
 
 # Same as in ctrl_bps_panda/python/lsst/ctrl/bps/panda/conf_example/setupUSDF.sh
 export PANDA_CONFIG_ROOT=$HOME/.panda
@@ -20,12 +22,5 @@ export IDDS_CONFIG=${PANDA_SYS}/etc/idds/idds.cfg.client.template
 # WMS plugin
 export BPS_WMS_SERVICE_CLASS=lsst.ctrl.bps.panda.PanDAService
 
-# Proxy for S3DF
-export HTTP_PROXY=http://atlsquid.slac.stanford.edu:3128
-export https_proxy=http://atlsquid.slac.stanford.edu:3128
-export http_proxy=http://atlsquid.slac.stanford.edu:3128
-export HTTPS_PROXY=http://atlsquid.slac.stanford.edu:3128
-export SQUID_PROXY=http://atlsquid.slac.stanford.edu:3128
-
-# Check panda auth status
+# Check PanDA authentication
 panda_auth status
