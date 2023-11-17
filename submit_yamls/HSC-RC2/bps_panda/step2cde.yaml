@@ -1,0 +1,15 @@
+LSST_VERSION: w_2023_43
+custom_lsst_setup: ''
+includeConfigs:
+- ${CTRL_BPS_PANDA_DIR}/config/bps_usdf.yaml
+- ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
+payload:
+  butlerConfig: /repo/main
+  dataQuery: instrument = 'HSC' and skymap = 'hsc_rings_v1'
+  inCollection: HSC/RC2/defaults
+  payloadName: "w_2023_43/DM-41354"
+  output: "HSC/runs/RC2/{payloadName}"
+pipelineYaml: ${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step2cde
+priority: 1000
+# For rescue
+# extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
