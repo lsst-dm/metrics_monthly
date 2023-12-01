@@ -1,0 +1,26 @@
+LSST_VERSION: d_2023_11_11
+custom_lsst_setup: ''
+includeConfigs:
+- ${DRP_PIPE_DIR}/bps/resources/LSSTCam-imSim/DRP-test-med-1.yaml
+payload:
+  butlerConfig: /repo/dc2+sasquatch_dev
+  dataQuery: instrument = 'LSSTCam-imSim' and skymap='DC2' and tract in (3828, 3829) and band in ('u', 'g', 'r', 'i', 'z', 'y')
+  inCollection: 2.2i/defaults/test-med-1
+  payloadName: "d_2023_11_11/DM-41677"
+  output: "2.2i/runs/test-med-1/{payloadName}"
+pipelineYaml: ${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step8
+#computeSite:
+site:
+  s3df:
+    profile:
+      condor:
+        +Walltime: 7200
+
+# Condor backend stuff
+wmsServiceClass: lsst.ctrl.bps.htcondor.HTCondorService
+
+# For sasquatch
+extraQgraphOptions: "-c parameters:sasquatch_dataset_identifier=DC2/TestMed1 -c parame\
+ters:sasquatch_timestamp_version=reference_package_timestamp --clobber-outputs"
+# For rescue
+# --skip-existing-in {output}"

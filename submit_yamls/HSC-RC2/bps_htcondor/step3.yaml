@@ -1,0 +1,22 @@
+LSST_VERSION: w_2023_43
+custom_lsst_setup: ''
+includeConfigs:
+- ${DRP_PIPE_DIR}/bps/resources/HSC/DRP-RC2.yaml
+payload:
+  butlerConfig: /repo/main
+  dataQuery: instrument = 'HSC' and skymap = 'hsc_rings_v1' and tract IN (9615, 9697, 9813)
+  inCollection: HSC/RC2/defaults
+  payloadName: "w_2023_43/DM-41354"
+  output: "HSC/runs/RC2/{payloadName}"
+pipelineYaml: ${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step3
+#computeSite:
+site:
+  s3df:
+    profile:
+      condor:
+        +Walltime: 7200
+
+# Condor backend stuff
+wmsServiceClass: lsst.ctrl.bps.htcondor.HTCondorService
+# For rescue
+# extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
