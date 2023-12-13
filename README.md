@@ -41,6 +41,13 @@ First I generally just build the quantum graph. Running like this means I can re
   * For DC2, you want to swap out `/repo/main+sasquatch_dev` for `/repo/dc2+sasquatch_dev` and `sasquatch_dataset_identifier=HSC/RC2` for `sasquatch_dataset_identifier=DC2/TestMed1`. You'll notice that these parameters are the same between the command-line and BPS yaml files here.
 * Next I run the quantum graph! `pipetask run -b /repo/main+sasquatch_dev -g atools.qgraph -j 24` (again switching out the butler for DC2). As this runs it will say how many datasets were transferred, etc. If something goes wrong mid-run, re-run the graph with `--skip-existing-in` and see what happens.
 This is equivalent to running step 8, but all the parameters and the sasquatch butler mean metrics get dispatched to Chronograf which you should check after this completes to make sure it was a success.
+## Generating resource usage metrics
+If you are sure all desired data products are in the campaign collection (make sure all inputs are run collections are present), you can run resource usage metrics.
+  1. Set up the stack used for your run.
+  2. Build the graph. `build-gather-resource-usage-qg <butler repo> <name>_usage.qgraph <main collection> --output <main collection>`
+    So, for HSC-RC2 with w_2023_47, I used `build-gather-resource-usage-qg /repo/main w_2023_47_usage.qgraph HSC/runs/RC2/w_2023_47/DM-41856 --output HSC/runs/RC2/w_2023_47/DM-41856`.
+  3. Run the graph. `pipetask run -b <butler repo> -g <name>_usage.qgraph -o <main collection> --register-dataset-types`
+    So, for HSC-RC2 with w_2023_47, I used `pipetask run -b /repo/main -g w_2023_47_usage.qgraph -o HSC/runs/RC2/w_2023_45/DM-41856 --register-dataset-types`
 ## If `finalJob.bash` (`final_job.bash`, etc) fails (and the rest of the workflow is successful):
 This essentially means something failed in transferring processed data from the quantum graph back to the butler datastore. We can fix this by manually running the equivalent `butler transfer-datasets` command:
 * Set up the stack for your run
