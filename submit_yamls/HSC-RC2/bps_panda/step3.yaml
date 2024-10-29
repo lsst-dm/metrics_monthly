@@ -13,3 +13,6 @@ pipelineYaml: ${DRP_PIPE_DIR}/pipelines/HSC/DRP-RC2.yaml#step3
 priority: 1000
 # For rescue
 # extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+finalJob:
+    command2: >-
+        pipetask report {butlerConfig} {fileDistributionEndPoint}{qgraphFile} --force-v2 --full-output-filename {submitPath}/{payloadName}_pipetask_report_output.json

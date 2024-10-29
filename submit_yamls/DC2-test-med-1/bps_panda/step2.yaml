@@ -14,3 +14,6 @@ pipelineYaml: ${DRP_PIPE_DIR}/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step2
 priority: 1000
 # For rescue
 # extraQgraphOptions: "--clobber-outputs --skip-existing-in {output}"
+finalJob:
+    command2: >-
+        pipetask report {butlerConfig} {fileDistributionEndPoint}{qgraphFile} --force-v2 --full-output-filename {submitPath}/{payloadName}_pipetask_report_output.json
